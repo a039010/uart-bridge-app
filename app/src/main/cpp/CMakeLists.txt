@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10.2)
+project("uart_jni")
+add_library(uart_jni SHARED uart_jni.c)
+find_library(log-lib log)
+target_link_libraries(uart_jni ${log-lib})
